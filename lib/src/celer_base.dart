@@ -41,8 +41,7 @@ class CelerWriter {
     });
 
     // Return a promise that will resolve at the same time as next promise
-    return Future.sync(
-        () => _nextFuture?.then((_) => {}).catchError((error) {}));
+    return Future.sync(() => _nextFuture?.then((_) => {}));
   }
 
   /// File isn't locked, write data
