@@ -26,6 +26,10 @@ Celer makes writing to the same file often/concurrently fast and safe.
 - ⚡ pretty fast under specific situation (see benchmark)
 - Included the Benchmark/Test in a flutter way
 
+> **Caution**
+>
+> in normal situation like single-time write, it rather be slower than the normal dart:io method
+
 ## Getting started
 
 nothing needs to be started.
@@ -52,7 +56,6 @@ await Future.wait(dataset.map((e) => celer.write(e)));
 
 In [benchmark](benchmark/tester.dart), We measured and compared the time when writing kb,mb-sized text 1000 times to the same file.
 
-
 ```text
 Write 1KB data to the same file x 1000
 celer(Runtime): 5820.627906976744 us.
@@ -69,6 +72,6 @@ You can run benchmark yourself by
 dart run benchmark/tester.dart
 ```
 
-> **Caution**
+> **Disclaimer**
 >
-> in normal situation like single-time write, it rather be slower than the normal dart:io method
+> It can be measured differently on your computer.
