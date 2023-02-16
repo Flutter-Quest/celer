@@ -1,5 +1,5 @@
 name: celer
-description: A starting point for Dart libraries or applications.
+description: Specialized fast async file writer. Celer makes writing to the same file often/concurrently fast and safe.
 version: 1.0.0
 repository: https://github.com/Flutter-Quest/celer
 
